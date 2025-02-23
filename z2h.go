@@ -35,5 +35,5 @@ func indexRune(s string, r rune) int {
 }
 
 func main() {
-    fmt.Println(convertToHalfWidth("Ｈｅｌｌｏ， ｗｏｒｌｄ！")) // "Hello, world!"
+    fmt.Println(Z2H("Ｈｅｌｌｏ， ｗｏｒｌｄ！")) // "Hello, world!"
 }
