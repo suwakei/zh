@@ -5,7 +5,7 @@ import (
 )
 
 
-func Z2H(str string) string {
+func Z2h(str string) string {
     var result string
     for _, char := range str {
         if idx := indexRune(ASCII_ZENKAKU_CHARS, char); idx != -1 {
