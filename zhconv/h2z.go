@@ -1,7 +1,7 @@
 package main
 
 import (
-    "fmt"
+    "github.com/suwakei/go-zhconv/tables"
 )
 
 func  H2z(str string) string {
@@ -25,17 +25,4 @@ func  H2z(str string) string {
         }
     }
     return result
-}
-
-func indexRune(s string, r rune) int {
-    for i, char := range s {
-        if char == r {
-            return i
-        }
-    }
-    return -1
-}
-
-func main() {
-    fmt.Println(H2Z("Hello, world!")) // "Ｈｅｌｌｏ， ｗｏｒｌｄ！"
 }

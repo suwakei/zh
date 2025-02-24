@@ -1,7 +1,7 @@
 package main
 
 import (
-    "fmt"
+    "github.com/suwakei/go-zhconv"
 )
 
 
@@ -32,8 +32,4 @@ func indexRune(s string, r rune) int {
         }
     }
     return -1
-}
-
-func main() {
-    fmt.Println(Z2H("Ｈｅｌｌｏ， ｗｏｒｌｄ！")) // "Hello, world!"
 }
