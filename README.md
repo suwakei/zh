@@ -20,8 +20,19 @@ import (
 )
 
 func main() {
-    result := zhconv.ToHalfWidth("Ｈｅｌｌｏ， ｗｏｒｌｄ！")
+    result := zhconv.Z2h("Ｈｅｌｌｏ， ｗｏｒｌｄ！")
     fmt.Println(result) // "Hello, world!"
 }
 
 ### convert from HalfWidth to FullWidth
+package main
+
+import (
+    "fmt"
+    "github.com/suwakei/go-zhconv"
+)
+
+func main() {
+    result := zhconv.H2z("Hello, world!")
+    fmt.Println(result) // "Ｈｅｌｌｏ， ｗｏｒｌｄ！"
+}
