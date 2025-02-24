@@ -7,3 +7,21 @@
 
 ```sh
 go get github.com/suwakei/go-zhconv
+
+
+## Usage
+### convert from FullWidth to HalfWidth
+
+package main
+
+import (
+    "fmt"
+    "github.com/suwakei/go-zhconv"
+)
+
+func main() {
+    result := zhconv.ToHalfWidth("Ｈｅｌｌｏ， ｗｏｒｌｄ！")
+    fmt.Println(result) // "Hello, world!"
+}
+
+### convert from HalfWidth to FullWidth
