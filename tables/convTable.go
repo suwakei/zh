@@ -1,4 +1,23 @@
-package main
+package tables
+
+type ConversionTables struct {
+    // ASCII_ZENKAKU_CHARS は全角ASCII文字の配列です。
+    ASCII_ZENKAKU_CHARS []rune
+    // ASCII_HANKAKU_CHARS は半角ASCII文字の配列です。
+    ASCII_HANKAKU_CHARS []rune
+    // KANA_ZENKAKU_CHARS は全角カナ文字の配列です
+    KANA_ZENKAKU_CHARS []rune
+    // KANA_HANKAKU_CHARS は半角カナ文字の配列です。
+    KANA_HANKAKU_CHARS []rune
+    // DIGIT_ZENKAKU_CHARS は全角数字の配列です
+    DIGIT_ZENKAKU_CHARS []rune
+    // DIGIT_HANKAKU_CHARS は半角数字の配列です。
+    DIGIT_HANKAKU_CHARS []rune
+     // KANA_TEN_MAP は半角カナの濁点マッピングです。
+    KANA_TEN_MAP map[rune]rune
+    // KANA_MARU_MAP は半角カナの丸点マッピングです。
+    KANA_MARU_MAP map[rune]rune
+}
 
 var (
     // ASCII_ZENKAKU_CHARS は全角ASCII文字の配列です。
@@ -36,3 +55,16 @@ var (
         'パ': 'ﾊ', 'ピ': 'ﾋ', 'プ': 'ﾌ', 'ペ': 'ﾍ', 'ポ': 'ﾎ',
     }
 )
+
+func New() *ConversionTables {
+    return &ConversionTables{
+        ASCII_ZENKAKU_CHARS: ASCII_ZENKAKU_CHARS,
+        ASCII_HANKAKU_CHARS: ASCII_HANKAKU_CHARS,
+        KANA_ZENKAKU_CHARS: KANA_ZENKAKU_CHARS,
+        KANA_HANKAKU_CHARS: KANA_HANKAKU_CHARS,
+        DIGIT_ZENKAKU_CHARS: DIGIT_ZENKAKU_CHARS,
+        DIGIT_HANKAKU_CHARS: DIGIT_HANKAKU_CHARS,
+        KANA_TEN_MAP: KANA_TEN_MAP,
+        KANA_MARU_MAP: KANA_MARU_MAP,
+    }
+}
