@@ -4,7 +4,7 @@ import (
     "fmt"
 )
 
-func  H2Z(str string) string {
+func  H2z(str string) string {
     var result string
     for i := 0; i < len(str); i++ {
         char := rune(str[i])
