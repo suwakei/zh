@@ -1,8 +1,12 @@
 package main
 
 import (
-    "github.com/suwakei/go-zhconv/tables"
+    "github.com/suwakei/go-zhconv/"
 )
+
+// strが空の場合や、無効な文字が含まれている場合にどう処理するか
+// そういったエラーハンドリングを書く
+// パフォーマンスの改善のためstringbuilder使う+=のところ
 
 func  H2z(str string) string {
     var result string
